@@ -45,15 +45,18 @@ const ImageInput = ({ url }: ImageInputProps) => {
                 <Image src={photo} alt="profile photo" />
               </div>
               <div className="flex h-[100%] w-[100%] z-20 bg-gradient-to-tl from-black/50 via-transparent to-white/30 flex-col justify-center items-center space-y-3 ">
-                <div className="relative">
-                  <div className="flex flex-col space-y-3 justify-center items-center">
-                    <Image
-                      src={uploadWhiteIcon}
-                      alt="upload image"
-                      className="w-20 h-24 opacity-80"
-                    />
-                    <span className="text-white opacity-80">Change Image</span>
-                  </div>
+                <div className="flex flex-col space-y-3 justify-center items-center">
+                  <Image
+                    src={uploadWhiteIcon}
+                    alt="upload image"
+                    className="w-20 h-24 opacity-60"
+                  />
+                  <span className="text-white opacity-80">Change Image</span>
+                  <input
+                    type="file"
+                    className="absolute opacity-0"
+                    accept="image/jpeg"
+                  />
                 </div>
               </div>
             </>
